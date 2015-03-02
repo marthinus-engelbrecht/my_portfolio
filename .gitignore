@@ -1,0 +1,10 @@
+www
+platforms
+plugins
+app/bower_components
+node_modules
+.tmp
+.sass-cache/
+app/main.css.map
+.idea
+npm-debug.log

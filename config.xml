@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="za.org.blaze_ulc" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Blaze ULC</name>
+    <description>
+        A webapp for youth on fire for Christ
+    </description>
+    <author email="mj.engelbrecht@gmail.com" href="http://cordova.io">
+        Marthinus Engebrecht
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>

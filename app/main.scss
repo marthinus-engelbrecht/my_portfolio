@@ -1,0 +1,73 @@
+@import "bower_components/foundation/scss/foundation/components/global";
+
+$primary-color : black;
+$button-height : 10px;
+
+@import "bower_components/foundation/scss/foundation/components/buttons";
+@import "bower_components/foundation/scss/foundation/components/grid";
+
+$slick-dot-color: white;
+
+.slick-carousel {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.image{
+  height: 30em;
+  width: 80em;
+}
+
+.navbar{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-buttons-group {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  margin-top: 5%;
+}
+
+.nav-button{
+  @include button($button-tny);
+  font-size: $button-font-med;
+  width: 200px;
+  height: $button-height;
+  line-height: $button-height;
+  font-variant:small-caps;
+}
+
+body {
+    background: #000000;
+}
+
+.logo{
+  display: block;
+  width: 200px;
+  height: 150px;
+}
+
+@media #{$medium-only} {
+}
+
+@media #{$small-only} {
+  .slick-carousel{
+    display: none;
+  }
+
+  .logo{
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .nav-button {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
