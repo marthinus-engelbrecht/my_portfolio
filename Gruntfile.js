@@ -93,40 +93,6 @@ module.exports = function (grunt) {
             }
         },
 
-        copy: {
-            //TODO: Only for now. Should be removed once we have the blaze Facebook details.
-            jsonToWww:{
-                expand: true,
-                cwd: 'app/',
-                src: ['**/*.json', '!**/bower_components/**', '!bower.json'],
-                dest: 'www'
-            },
-            partialsToWww: {
-                expand: true,
-                cwd: 'app/',
-                src: ['**/partials/**/*.html', '!**/bower_components/**'],
-                dest: 'www'
-            },
-            htmlToTmp: {
-                expand: true,
-                cwd: 'app/',
-                src: ['index.html'],
-                dest: '.tmp'
-            },
-            tmpToWww: {
-                expand: true,
-                cwd: '.tmp/',
-                src: ['blaze.min.js', 'blaze.css', 'index.html'],
-                dest: 'www'
-            },
-            cssToWww: {
-                expand: true,
-                cwd: 'app/',
-                src: 'main.css',
-                dest: 'www'
-            }
-        },
-
         karma: {
             unit: {
                 configFile: 'test/config/karma.conf.js',
@@ -164,24 +130,6 @@ module.exports = function (grunt) {
             'includeSource',
             'connect:server',
             'watch'
-        ]);
-    });
-
-    grunt.registerTask('build', function () {
-        grunt.task.run([
-            'clean',
-            'wiredep:app',
-            'bower_concat',
-            'includeSource',
-            'concat',
-            'ngAnnotate',
-            'uglify',
-            'copy:htmlToTmp',
-            'usemin',
-            'copy:tmpToWww',
-            'copy:cssToWww',
-            'copy:partialsToWww',
-            'copy:jsonToWww'
         ]);
     });
 
